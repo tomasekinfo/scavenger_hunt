@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scavenger Hunt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Login screen -->
+    <div id="login-screen">
+      <h1>Scavenger Hunt</h1>
+      <input type="text" id="serial-input" placeholder="Enter your team name">
+      <button onclick="login()">Start</button>
+      <p id="login-error" class="error"></p>
+    </div>
+
+    <!-- Game screen -->
+    <div id="game-screen" style="display: none;">
+      <h2>Location:</h2>
+      <p id="hint"></p>
+      <input type="text" id="password-input" placeholder="Enter password">
+      <button onclick="submitPassword()">Submit</button>
+      <p id="password-error" class="error"></p>
+      <p>Coordinates of the last location:</p>
+      <p id="coordinates"></p>
+    </div>
+
+    <!-- Congrats screen -->
+    <div id="congrats-screen" style="display: none;">
+      <h1>Congrats!</h1>
+      <p>You’ve completed the hunt!</p>
+      <p>Coordinates of the last location:</p>
+      <p id="coordinates2"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
